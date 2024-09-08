@@ -13,6 +13,9 @@ def main() -> None:
     threshold = 100
     binary_img = cv.threshold(img, threshold, 255, cv.THRESH_BINARY)[1]
     cv.imwrite(f"results/{image_name.split(".")[0]}_binary.png", binary_img)
+    cv.imshow("Binary output image", binary_img)
+    cv.waitKey(0)
+    cv.destroyAllWindows()
 
 
 if __name__ == "__main__":
