@@ -6,7 +6,7 @@ import scipy
 from matplotlib import pyplot as plt
 import cv2 as cv
 import time
-import time
+
 
 
 def change_brightness(image, amount):
@@ -70,9 +70,6 @@ def conv_sharpen(image, kernel_size):
     
     res = signal.convolve2d(image, sharpen, boundary='symm')
     return res
-
-
-
 
 def conv_gaussian(image, kernel_size):
     # Add code to convolve image with gaussian filter here
