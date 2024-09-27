@@ -2,3 +2,5 @@ opencv-python
 matplotlib
 numpy
 torch
+scipy
+jupyter
