@@ -19,12 +19,15 @@ end_col = start_col + rect_width
 
 rect[start_row:end_row, start_col:end_col] = 1
 
+angle = 45
+rect = scipy.ndimage.rotate(rect, angle, reshape=False)
+
 plt.imshow(rect, cmap="grey")
 plt.show()
 
 rect_fft = (abs(scipy.fft.fft2(rect, s=(50,50))))
 
-plt.imshow(rect_fft)
+plt.imshow(np.log(rect_fft))
 plt.colorbar()
 plt.show()
 ### ###
